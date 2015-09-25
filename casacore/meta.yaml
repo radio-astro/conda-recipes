@@ -1,0 +1,20 @@
+package:
+  name: casacore
+  version: "2.0.3"
+
+source:
+  fn: casacore-2.0.3.tar.gz
+  url: https://github.com/casacore/casacore/archive/v2.0.3.tar.gz
+  sha1: 61853f7ec6a8a797fe312c8dc903f53353be5bf6
+
+requirements:
+  build:
+    - cmake
+    - bison
+    - fftw3f
+    - hdf5
+
+about:
+  home: https://github.com/casacore/casacore/
+  license: GPL2
+  summary: 'Suite of c++ libraries for radio astronomy data processing'

@@ -1,0 +1,51 @@
+package:
+  name: python-casacore
+  version: "2.0.0"
+
+source:
+  fn: python-casacore-2.0.0.tar.gz
+  url: https://pypi.python.org/packages/source/p/python-casacore/python-casacore-2.0.0.tar.gz
+  md5: 8bd5ef2a71c8ddb492391a6108cf3360
+
+# build:
+  # noarch_python: True
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - python-casacore = python-casacore:main
+    #
+    # Would create an entry point called python-casacore that calls python-casacore.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - casacore
+
+  run:
+    - python
+    - casacore
+
+test:
+  # Python imports
+  imports:
+    - casacore
+    - casacore.fitting
+    - casacore.functionals
+    - casacore.images
+    - casacore.measures
+    - casacore.quanta
+    - casacore.tables
+    - casacore.util
+
+about:
+  home: https://github.com/casacore/python-casacore
+  license: GPL
+  summary: 'A wrapper around CASACORE, the radio astronomy library'
